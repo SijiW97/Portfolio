@@ -253,8 +253,8 @@
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_5wfiny6', 'template_gsx9en1', '#contact-form', 'iR4cVRwdc3xjdn0cT')
+    emailjs.init("5ytRo1kReeAV6b40U"); 
+    emailjs.sendForm('service_o9zp2eo', 'template_9l64888', '#contact-form', '5ytRo1kReeAV6b40U')
       .then(() => {
         contactMessage.textContent = "Your message has been sent. Thank you!"
 
