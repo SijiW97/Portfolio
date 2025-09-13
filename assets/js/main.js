@@ -165,52 +165,6 @@
   });
 
   /**
-   * Projects isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let certificationsContainer = select('.certifications-container');
-    if (certificationsContainer) {
-      let certificationsIsotope = new Isotope(certificationsContainer, {
-        itemSelector: '.certifications-item'
-      });
-
-      let certificationsFilters = select('#certifications-flters li', true);
-
-      on('click', '#certifications-flters li', function(e) {
-        e.preventDefault();
-        certificationsFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        certificationsIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        certificationsIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
-
-  /**
-   * Initiate certifications lightbox 
-   */
-  const certificationsLightbox = GLightbox({
-    selector: '.certifications-lightbox'
-  });
-
-  /**
-   * Initiate certifications details lightbox 
-   */
-  const certificationsDetailsLightbox = GLightbox({
-    selector: '.certifications-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
-
-  /**
    * certifications details slider
    */
   new Swiper('.certifications-details-slider', {
