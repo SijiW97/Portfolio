@@ -1123,7 +1123,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
+  background: transparent;
 }
 
 .certifications .certifications-wrap::before {
@@ -1305,6 +1305,12 @@ section {
 
 .certifications-details .certifications-description p {
   padding: 0;
+}
+.certifications .certifications-item img {
+  height: 350px; /* Adjust this value as needed */
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
